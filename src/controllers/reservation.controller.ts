@@ -20,8 +20,37 @@ export async function createReservation(
         });
     }catch(err){
         //pass to the global error handler
-        next(err);
+        return next(err);
     }
 }
 
+export async function cancelReservation(
+    req: Request, 
+    res: Response,
+    next: NextFunction
+){
+    try{
+        const { reservationId } = req.params;
+
+        await ticketService.cancelReservation(reservationId);
+
+        return res.status(201).send();
+    }catch(err){
+        return next(err);
+    }
+}
+
+export async function getEventSummary(
+    req: Request,
+    res: Response,
+    next: NextFunction
+){
+    try{
+        const summary = ticketService.getEventSummary();
+        
+        return res.status(200).json(summary);
+    }catch(err){
+        return next(err);
+    }
+}
 

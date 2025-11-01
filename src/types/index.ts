@@ -1,5 +1,9 @@
 export interface Event{
-
+    eventId: string,
+    name: string,
+    totalSeats: number,
+    reservationCount: number,
+    version: number
 }
 
 export interface ReserveRequest{
@@ -12,4 +16,9 @@ export interface ReserveResponse{
     seats: number;
     status: string;
 }
+
+export interface EventSummary extends Event {
+    reservationCount: number;
+}
+
 
