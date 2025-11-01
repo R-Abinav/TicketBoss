@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 
 import { ENV } from './config/env.config'
+import { errorHandler } from "./middleware/errorHandler.middleware";
 
 dotenv.config();
 
@@ -26,7 +27,7 @@ app.get(`${routePrefix}/health`, (req, res) => {
 });
 
 //Error Handler
-// app.use(errorHandler)
+app.use(errorHandler)
 
 export default app;
 
