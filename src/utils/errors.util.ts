@@ -18,6 +18,12 @@ export class ReservationNotFoundError extends AppError {
     }
 }
 
+export class ReservationAlreadyCancelled extends AppError{
+    constructor() {
+        super('Reservation is already cancelled', 409);
+    }
+}
+
 export class ConcurrencyError extends AppError {
     constructor() {
         super('Concurrent update detected', 409);
