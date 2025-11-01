@@ -1,0 +1,30 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    //Base options
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "ES2022",
+    "verbatimModuleSyntax": true,
+    "allowJs": true,
+    "moduleDetection": "force",
+
+    //Strictness
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+
+    //Not transpiling with typescript
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "noEmit": true,
+
+    //Out Directory
+    "outDir": "dist",
+    "sourceMap": true,
+
+    //Code doesn't run on DOM
+    "lib": ["ES2022"],
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
