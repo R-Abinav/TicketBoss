@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from 'express';
+import type { Request, Response, NextFunction } from 'express';
 import * as ticketService from '../services/ticket.service';
 
 import { AppError } from '../utils/errors.util';
@@ -30,7 +30,7 @@ export async function cancelReservation(
     next: NextFunction
 ){
     try{
-        const { reservationId } = req.params;
+        const { reservationId } = req.params as { reservationId: string };
 
         await ticketService.cancelReservation(reservationId);
 
