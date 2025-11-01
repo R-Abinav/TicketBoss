@@ -1,5 +1,6 @@
 import { Router } from 'express';
-// import * as controller from '../controllers/resveration.controller'
+import * as controller from '../controllers/reservation.controller'
+import { validateReservation } from '../middleware/validator.middleware';
 
 const router = Router();
 

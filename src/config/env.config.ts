@@ -5,5 +5,6 @@ dotenv.config();
 export const ENV = {
     PORT: process.env.PORT,
     NODE_ENV: process.env.NODE_ENV,
-    DB_URL: process.env.DATABASE_URL
+    DATABASE_URL: process.env.DATABASE_URL,
+    EVENT_ID: process.env.EVENT_ID
 }
