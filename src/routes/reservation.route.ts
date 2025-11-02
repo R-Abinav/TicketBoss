@@ -13,4 +13,4 @@ router.delete('/reservations/:reservationId', controller.cancelReservation);
 //GET -> /reservations 
 router.get('/reservations', controller.getEventSummary);
 
-export default router
+export default router;

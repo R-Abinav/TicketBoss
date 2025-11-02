@@ -46,7 +46,7 @@ export async function getEventSummary(
     next: NextFunction
 ){
     try{
-        const summary = ticketService.getEventSummary();
+        const summary = await ticketService.getEventSummary();
         
         return res.status(200).json(summary);
     }catch(err){

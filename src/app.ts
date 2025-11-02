@@ -4,6 +4,7 @@ import cors from "cors";
 
 import { ENV } from './config/env.config'
 import { errorHandler } from "./middleware/errorHandler.middleware";
+import reservationRoutes from "./routes/reservation.route";
 
 dotenv.config();
 
@@ -16,7 +17,9 @@ app.use(express.urlencoded({ extended: true }));
 //Routes
 const apiVersion = 1
 const routePrefix = `/api/v${apiVersion}`;
-// app.use(`${routePrefix}`, reservationRoutes);
+
+
+app.use(`${routePrefix}`, reservationRoutes);
 
 //Health Check Endpoint
 app.get(`${routePrefix}/health`, (req, res) => {
