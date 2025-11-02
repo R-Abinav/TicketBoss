@@ -12,11 +12,11 @@ export async function validateReservation(
         return next(new AppError('partnerId is required and must be of the type "string"', 400));
     }
 
-    if(!seats || typeof seats !== 'number' || seats <= 0 || seats > 10 ){
+    if(!seats || typeof seats !== 'number'){
         return next(new AppError('seats is required and must of the type "number"', 400));
     }
 
-    if(seats <=0 || seats > 10){
+    if(seats <= 0 || seats > 10){
         return next(new AppError('seats must be between 1 and 10 only', 400));
     }
 
