@@ -120,7 +120,7 @@ export async function cancelReservation(
 export async function getEventSummary(){
     const event = await prisma.event.findUnique({
         where: {
-            event: EVENT_ID
+            eventId: EVENT_ID
         }
     });
 

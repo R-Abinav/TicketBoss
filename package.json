@@ -4,14 +4,10 @@
   "description": "PowerPlay Backend Intern Assignment. A tiny event-ticketing API with optimistic concurrency control for real-time seat reservations.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npm run prisma:generate && nodemon --exec tsx src/server.ts",
+    "dev": "npx prisma generate && nodemon --exec tsx src/server.ts",
+    "build": "npx prisma generate && tsc",
     "start": "node dist/server.js",
-    "build": "npm run prisma:generate && tsc",
-    "prisma:generate": "prisma generate",
-    "prisma:migrate": "prisma migrate dev",
-    "prisma:studio": "prisma studio",
-    "postinstall": "prisma generate"
+    "postinstall": "npx prisma generate"
   },
   "repository": {
     "type": "git",

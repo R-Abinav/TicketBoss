@@ -1,6 +1,6 @@
 import app from "./app";
 import { ENV } from "./config/env.config";
-import { seedDB, connectDB } from "./config/db.config";
+import { seedDB, connectDB } from "./config/db.config"; 
 
 const port = ENV.PORT || "8080";
 

@@ -14,7 +14,7 @@ export async function createReservation(
         const reservation = await ticketService.reserveSeats(partnerId, seats);
 
         return res.status(201).json({
-            reservationId: reservation.Id,
+            reservationId: reservation.reservationId,
             seats: reservation.seats,
             status: reservation.status
         });
