@@ -143,7 +143,8 @@ Create a new seat reservation for a partner.
 ```json
 {
   "error": "Not enough seats left"
-}```
+}
+```
 
 **Validation Error - 400 Bad Request:**
 ```json
