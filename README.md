@@ -1,3 +1,6 @@
+Of course, here is the updated markdown with the images included in the API Documentation section.
+
+```markdown
 # TicketBoss - Event Ticketing API
 
 A real-time event ticketing API with optimistic concurrency control for seat reservations. Built for high-concurrency scenarios to prevent over-booking while providing instant accept/deny responses.
@@ -53,8 +56,7 @@ npx prisma migrate dev --name init
 npx prisma generate
 ```
 
-5. Start the application
-```bash
+5. Start the application```bash
 # Development mode (with hot reload)
 npm run dev
 
@@ -144,8 +146,7 @@ Create a new seat reservation for a partner.
 ```json
 {
   "error": "Not enough seats left"
-}
-```
+}```
 
 **Validation Error - 400 Bad Request:**
 ```json
@@ -160,6 +161,7 @@ curl -X POST "http://localhost:8080/api/v1/reservations" \
   -H "Content-Type: application/json" \
   -d '{"partnerId": "abc-corp", "seats": 3}'
 ```
+![Reserve Seats](./docs/reserveSeats.png)
 
 ---
 
@@ -193,6 +195,9 @@ This error is returned if:
 ```bash
 curl -X DELETE "http://localhost:8080/api/v1/reservations/a1b2c3d4-e5f6-7890-abcd-ef1234567890"
 ```
+![Cancel Seats](./docs/cancelSeats.png)
+
+![Cancel Seats DB](./docs/cancelSeatsDB.png)
 
 ---
 
@@ -247,10 +252,10 @@ PostgreSQL was chosen over NoSQL databases for several critical reasons:
 The system uses a version-based optimistic locking strategy:
 ```typescript
 // Pseudo-code
-UPDATE events 
-SET available_seats = available_seats - 3, 
+UPDATE events
+SET available_seats = available_seats - 3,
     version = version + 1
-WHERE event_id = 'node-meetup-2025' 
+WHERE event_id = 'node-meetup-2025'
   AND version = current_version
 ```
 
@@ -299,7 +304,6 @@ All critical operations use Prisma transactions with `Serializable` isolation le
 2. **No Authentication**: Partner IDs are trusted (authentication can be added as middleware)
 3. **Idempotency**: Clients should implement retry logic for 409 conflicts
 
-
 ### Error Handling
 
 All errors are centralized through an Express error handler middleware:
@@ -337,7 +341,7 @@ TicketBoss/
 │   ├── app.ts               # Express app configuration
 │   └── server.ts            # Server entry point
 ├── .env                     # Environment variables (not in git)
-├── .env.example                     
+├── .env.example
 ├── .gitignore
 ├── package.json
 ├── package-lock.json        # The lock file
@@ -359,8 +363,8 @@ TicketBoss/
 - Required fields
 - Data types
 
-**`src/config/db.config.ts`**: 
+**`src/config/db.config.ts`**:
 - Prisma client singleton pattern
 - Database connection management
 - Automatic seeding on startup
-
+```
