@@ -1,6 +1,3 @@
-Of course, here is the updated markdown with the images included in the API Documentation section.
-
-```markdown
 # TicketBoss - Event Ticketing API
 
 A real-time event ticketing API with optimistic concurrency control for seat reservations. Built for high-concurrency scenarios to prevent over-booking while providing instant accept/deny responses.
@@ -367,4 +364,3 @@ TicketBoss/
 - Prisma client singleton pattern
 - Database connection management
 - Automatic seeding on startup
-```
