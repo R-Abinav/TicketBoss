@@ -10,8 +10,8 @@ async function startServer(){
     await connectDB();
 
     //Seed the DB
-    console.log("Seeding the DB...");
-    await seedDB();
+    // console.log("Seeding the DB...");
+    // await seedDB();
 
     //Start the server
     console.log("Starting the server...");

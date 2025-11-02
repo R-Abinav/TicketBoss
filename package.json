@@ -2,11 +2,12 @@
   "name": "ticketboss",
   "version": "1.0.0",
   "description": "PowerPlay Backend Intern Assignment. A tiny event-ticketing API with optimistic concurrency control for real-time seat reservations.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "",
-    "dev": "ts-node "
+    "dev": "nodemon --exec tsx src/server.ts",
+    "start": "node dist/server.js",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
