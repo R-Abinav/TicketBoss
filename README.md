@@ -365,3 +365,7 @@ TicketBoss/
 - Prisma client singleton pattern
 - Database connection management
 - Automatic seeding on startup
+
+## Author
+
+Created by Abinav ([@R-Abinav](https://github.com/R-Abinav))
