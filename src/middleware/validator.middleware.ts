@@ -16,9 +16,9 @@ export async function validateReservation(
         return next(new AppError('seats is required and must of the type -> number', 400));
     }
 
-    // if(seats <= 0 || seats > 10){
-    //     return next(new AppError('number of seats must be between 1 and 10 only', 400));
-    // }
+    if(seats <= 0 || seats > 10){
+        return next(new AppError('number of seats must be between 1 and 10 only', 400));
+    }
 
     next();
 }
